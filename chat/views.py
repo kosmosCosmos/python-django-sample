@@ -13,4 +13,4 @@ def home(request):
         return redirect('/')
     items = Item.objects.all()
     counter = redis.incr('counter')
-    return render(request, 'home.html', {'items': items, 'counter': counter})
+    return render(request, 'index.html', {'items': items, 'counter': counter})
